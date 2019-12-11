@@ -1,13 +1,12 @@
 package swengb.fh.verbic.moviereview
 
-import android.app.Person
 
 class Movie (val id: String,
              val title: String,
              val release: String,
              val plot: String,
              val genre: MovieGenre,
-             val director: Person,
+             val director: Person ,
              val actors: List<Person>,
              val reviews: MutableList<Review>) {
     fun ratingAverage(): Double {
