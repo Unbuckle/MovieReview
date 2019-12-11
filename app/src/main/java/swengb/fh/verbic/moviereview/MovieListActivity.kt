@@ -8,7 +8,7 @@ import kotlinx.android.synthetic.main.activity_movie_list.*
 
 class MovieListActivity : AppCompatActivity() {
         val movieAdapter = MovieAdapter() {
-            val intent = Intent(this, MovieReviewActivity::class.java)
+            val intent = Intent(this, MovieDetailActivity::class.java)
             intent.putExtra(EXTRA_MOVIE_ID, it.id)
             startActivityForResult(intent, ADD_OR_EDIT_REVIEW_REQUEST)
         }
