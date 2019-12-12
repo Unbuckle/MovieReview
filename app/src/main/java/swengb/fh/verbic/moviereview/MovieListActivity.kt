@@ -10,12 +10,11 @@ class MovieListActivity : AppCompatActivity() {
         val movieAdapter = MovieAdapter() {
             val intent = Intent(this, MovieDetailActivity::class.java)
             intent.putExtra(EXTRA_MOVIE_ID, it.id)
-            startActivityForResult(intent, ADD_OR_EDIT_REVIEW_REQUEST)
+            startActivity(intent)
         }
 
         companion object {
             val EXTRA_MOVIE_ID = "MOVIE_ID_EXTRA"
-            val ADD_OR_EDIT_REVIEW_REQUEST = 1
         }
 
         override fun onCreate(savedInstanceState: Bundle?) {
